@@ -70,7 +70,7 @@ jobs:
 
       - name: Install flutter rust bridge deps
         run: |
-          cargo install flutter_rust_bridge_codegen
+          cargo install flutter_rust_bridge_codegen cargo-expand
           Push-Location flutter ; flutter pub get ; Pop-Location
           ~/.cargo/bin/flutter_rust_bridge_codegen --rust-input ./src/flutter_ffi.rs --dart-output ./flutter/lib/generated_bridge.dart
 
